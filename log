@@ -10,3 +10,14 @@ Thu 20 Apr 2023 03:55:15 PM UTC:
  tests:  4|7
 total_score: 5/70
 a691dda
+Thu 20 Apr 2023 04:01:55 PM UTC: 
+ treemap.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:73:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+   73 |   Pair* aux = tree->root->pair;
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+a424113
