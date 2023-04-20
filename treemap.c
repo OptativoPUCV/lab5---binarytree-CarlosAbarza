@@ -177,5 +177,14 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+  if (!tree->current->right) {
+    while (tree->current->parent) {
+      if (tree->lower_than(tree->current->pair->key, tree->current->parent->pair->key)){
+        tree->current = tree->current->parent;
+        return tree->current->pair;
+      }
+      tree->current = tree->current->parent;
+    }
+  }
+  return NULL;
 }
