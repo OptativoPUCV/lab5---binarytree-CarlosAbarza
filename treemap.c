@@ -167,6 +167,14 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
 
 
 Pair * upperBound(TreeMap * tree, void* key) {
+  Pair *aux = searchTreeMap(tree, key);
+  if (!aux) {
+    TreeNode *temp = minimum(tree->current);
+    return temp->pair;
+  }
+  else {
+    return aux;
+  }
     return NULL;
 }
 
