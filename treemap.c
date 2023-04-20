@@ -187,7 +187,7 @@ Pair * nextTreeMap(TreeMap * tree) {
     }
   }
   else {
-    minimum(tree->current->right);
+    tree->current = minimum(tree->current->right);
     return tree->current->pair;
   }
   return NULL;
