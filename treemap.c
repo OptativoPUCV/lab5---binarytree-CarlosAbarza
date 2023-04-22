@@ -173,6 +173,8 @@ Pair * upperBound(TreeMap * tree, void* key) {
       nextTreeMap(tree);
     }
   }
+  if (!tree->current)
+    return NULL;
   return tree->current->pair;
   
 
